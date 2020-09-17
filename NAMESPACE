@@ -1,0 +1,18 @@
+#### imports
+importFrom("survival", "Surv")
+importFrom("graphics","axis","mtext","par", "plot", "points","segments","title")
+importFrom("stats","as.formula","coef","model.extract","model.frame","model.matrix","pchisq","qchisq","qnorm","sd")
+importFrom("utils","tail")
+
+#### export of public functions:
+export(breast,coxphf, coxphfplot, coxphftest, Surv) 
+
+
+#### definition of S3 methods:
+S3method(print, coxphf)
+S3method(summary, coxphf)
+S3method(print, coxphftest)
+
+#### register shared objects (Fortran DLL):
+useDynLib(coxphf)
+

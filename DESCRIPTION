@@ -1,0 +1,23 @@
+Package: coxphf
+Version: 1.13
+Date: 2018-03-03
+Title: Cox Regression with Firth's Penalized Likelihood
+Authors@R: c(person("Georg", "Heinze", role=c("aut", "cre"), email="georg.heinze@meduniwien.ac.at"),
+			 person("Meinhard", "Ploner", role=c("aut")))
+Depends: R (>= 3.0.2)
+Imports: survival
+Description: Implements Firth's penalized maximum likelihood bias reduction method  for Cox regression
+  which has been shown to provide a solution in case of monotone likelihood (nonconvergence of likelihood function).
+  The program fits profile penalized likelihood confidence intervals which were proved to outperform
+  Wald confidence intervals.
+License: GPL
+URL:
+        http://cemsiis.meduniwien.ac.at/kb/wf/software/statistische-software/fccoxphf/
+LazyLoad: yes
+NeedsCompilation: yes
+Packaged: 2018-03-03 09:39:29 UTC; Biometrikus
+Author: Georg Heinze [aut, cre],
+  Meinhard Ploner [aut]
+Maintainer: Georg Heinze <georg.heinze@meduniwien.ac.at>
+Repository: CRAN
+Date/Publication: 2018-03-03 09:50:20 UTC
