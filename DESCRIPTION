@@ -9,7 +9,7 @@ Depends: R (>= 3.0.2)
 Imports: survival
 Description: Implements Firth's penalized maximum likelihood bias reduction method  for Cox regression
   which has been shown to provide a solution in case of monotone likelihood (nonconvergence of likelihood function), see 
-  Heinze and Schemper Biometrics (2001) and Heinze and Dunkler StatMed (2008).
+  Heinze and Schemper (2001) and Heinze and Dunkler (2008).
   The program fits profile penalized likelihood confidence intervals which were proved to outperform
   Wald confidence intervals.
 License: GPL
