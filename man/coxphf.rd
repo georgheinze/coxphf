@@ -4,6 +4,7 @@
 \encoding{UTF-8}
 \name{coxphf}
 \alias{coxphf}
+\alias{_PACKAGE}
 \alias{{coxphf}-package}
 \title{Cox Regression with Firth's Penalized Likelihood}
 \usage{
@@ -185,6 +186,12 @@ Heinze G and Schemper M (2001). A Solution to the Problem of Monotone Likelihood
 Heinze G (1999). Technical Report 10/1999: The application of Firth's procedure to Cox and logistic regression. Section of Clinical Biometrics, Department of Medical Computer Sciences, University of Vienna, Vienna.
 }
 \seealso{
+Useful links:
+\itemize{
+  \item \url{https://cemsiis.meduniwien.ac.at/kb/wf/software/statistische-software/fccoxphf/}
+}
+
+
 [coxphfplot, coxphftest]
 }
 \author{

@@ -46,5 +46,5 @@
 #' @importFrom stats as.formula coef model.extract model.frame model.matrix pchisq qchisq qnorm sd model.response
 #' @importFrom utils tail
 #' 
-#' @useDynLib coxphf
-NULL
+#' @useDynLib coxphf, .registration=TRUE
+"_PACKAGE"
