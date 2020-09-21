@@ -79,4 +79,3 @@ sim<-data.frame(sim)
 profplot<-coxphfplot(sim, formula=Surv(time,cens)~x, profile=~x)
 }
 \keyword{survival}
-

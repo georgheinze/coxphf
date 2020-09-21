@@ -15,4 +15,3 @@ S3method(print, coxphftest)
 
 #### register shared objects (Fortran DLL):
 useDynLib(coxphf)
-

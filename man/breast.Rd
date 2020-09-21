@@ -28,4 +28,3 @@ survival time, survival status, Tumor stage, Nodal status, Grading, Cathepsin-D 
 data(breast)
 }
 \keyword{datasets}
-

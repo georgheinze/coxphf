@@ -82,4 +82,3 @@ coxphftest( formula=Surv(start, stop, event) ~ x1+x2+x3, test=~x1+x2,  data=test
 
 }
 \keyword{survival}
-

@@ -1050,7 +1050,7 @@ double precision, INTENT(OUT)                     :: w(N)
 double precision :: s,t
 INTEGER :: i,j,k,l,m, p
 
-!Anm GH bei den Dimensionen die Indizes verändert, waren v(lv,1) und w(1) vorher
+!Anm GH bei den Dimensionen die Indizes ver?ndert, waren v(lv,1) und w(1) vorher
 
 intrinsic dabs
 !GH 161221
