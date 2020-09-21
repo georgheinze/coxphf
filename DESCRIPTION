@@ -14,3 +14,5 @@ Description: Implements Firth's penalized maximum likelihood bias reduction meth
   Wald confidence intervals.
 License: GPL
 URL: https://cemsiis.meduniwien.ac.at/kb/wf/software/statistische-software/fccoxphf/
+RoxygenNote: 7.1.1
+LazyData: true

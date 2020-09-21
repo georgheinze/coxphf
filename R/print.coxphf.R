@@ -1,3 +1,4 @@
+#' @exportS3Method print coxphf
 print.coxphf <-
   function(
     x,   	# object of class coxphf

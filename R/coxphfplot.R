@@ -1,3 +1,56 @@
+#' Plot the Penalized Profile Likelhood Function
+#' 
+#' Plots the penalized profile likelihood for a specified parameter.
+#' 
+#' This function plots the profile (penalized) log likelihood of the specified parameter. A symmetric shape of 
+#' the profile (penalized) log likelihood (PPL) function allows use of Wald intervals, while an
+#' asymmetric shape demands profile (penalized) likelihood intervals (Heinze & Schemper (2001)).
+#'
+#' @param formula a formula object, with the response on the left of the  operator, and the
+#' model terms on the right. The response must be a survival object as returned by the 'Surv' function.
+#' @param data a data.frame in which to interpret the variables named in the 'formula' argument.
+#' @param profile a righthand formula specifying the plotted parameter, interaction or general term, e.g. \code{~ A} or \code{~ A : C}.
+#' @param pitch distances between the interpolated points in standard errors of the parameter estimate, the default value is 0.05.
+#' @param limits the range of the x-axis in terms of standard errors from the parameter estimate. The default values 
+#' are the extremes of both confidence intervals, Wald and PL, plus or minus half a
+#' standard error, respectively.
+#' @param alpha the significance level (1-\eqn{\alpha} the confidence level, 0.05 as default).
+#' @param maxit maximum number of iterations (default value is 50)
+#' @param maxhs maximum number of step-halvings per iterations (default value is 5). 
+#' The increments of the parameter vector in one Newton-Rhaphson iteration step are halved, 
+#' unless the new likelihood is greater than the old one, maximally doing \code{maxhs} halvings.
+#' @param epsilon specifies the maximum allowed change in penalized log likelihood to declare convergence. Default value is 0.0001.
+#' @param maxstep specifies the maximum change of (standardized) parameter values allowed in one iteration. Default value is 2.5.
+#' @param firth use of Firth's penalized maximum likelihood (\code{firth=TRUE}, default) or the standard maximum likelihood method (\code{firth=FALSE}) for fitting the Cox model.
+#' @param penalty optional: specifies a vector of 1s and 0s, where 0 means that the corresponding parameter is fixed at 0, while 1 enables 
+#' parameter estimation for that parameter. The length of adapt must be equal to the number of parameters to be estimated.
+#' @param adapt strength of Firth-type penalty. Defaults to 0.5.
+#' @param legend if FALSE, legends in the plot would be omitted (default is TRUE).
+#' @param ... other parameters to legend
+#'
+#' @return A matrix of dimension \eqn{m \times 3}, with \eqn{m = 1/\code{pitch} + 1}. 
+#' With the default settings, \eqn{m=101}. The column headers are:
+#' \item{std}{the distance from the parameter estimate in standard errors}
+#' \item{x}{the parameter value}
+#' \item{log-likelihood}{the profile likelihood at \code{x}}
+#' 
+#' @export
+#'
+#' @examples
+#' library(survival)
+#' time<-c(1,2,3)
+#' cens<-c(1,1,1)
+#' x<-c(1,1,0)
+#' sim<-cbind(time,cens,x)
+#' sim<-data.frame(sim)
+#' profplot<-coxphfplot(sim, formula=Surv(time,cens)~x, profile=~x)
+#' 
+#' @references Firth D (1993). Bias reduction of maximum likelihood estimates. \emph{Biometrika} 80:27--38.
+#' 
+#' Heinze G and Schemper M (2001). A Solution to the Problem of Monotone Likelihood in Cox Regression. \emph{Biometrics} 57(1):114--119. 
+#' 
+#' Heinze G (1999). Technical Report 10/1999: The application of Firth's procedure to Cox and logistic regression. Section of Clinical Biometrics, Department of Medical Computer Sciences, University of Vienna, Vienna.
+#' @author Georg Heinze and Meinhard Ploner
 coxphfplot <-
   function(
     formula, 
