@@ -27,7 +27,7 @@
 #'  The package coxphf provides a comprehensive tool to facilitate the application of Firth's penalized 
 #'  likelihood method to Cox regression analysis. The core routines are written in Fortran 90, (and to our knowledge this is the first package written in Fortran 90). Some description of the problem of monotone likelihood
 #'  and Firth's penalized likelihood method as a solution can be found the web page 
-#'  \url{http://cemsiis.meduniwien.ac.at/en/kb/science-research/software/statistical-software/fccoxphf/}.
+#'  \url{https://cemsiis.meduniwien.ac.at/en/kb/science-research/software/statistical-software/fccoxphf/}.
 #'  
 #'  Version 1.13  now includes a convergence check and issues a warning in case of non-convergence. Profile likelihood confidence intervals or 
 #'  the estimation of the penalized likelihood ratio $p$-values can be vulnerable
