@@ -28,3 +28,7 @@ data(breast)
 fit.breast<-coxphf(data=breast, Surv(TIME,CENS)~T+N+G+CD)
 summary(fit.breast)
 ```
+
+## Acknowledgment
+
+This work was supported by the Austrian Science Fund (FWF) (award I 2276).
